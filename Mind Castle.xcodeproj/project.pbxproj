@@ -15,6 +15,10 @@
 		72B5094423E2F511003F654E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B5094323E2F511003F654E /* Preview Assets.xcassets */; };
 		72B5094723E2F511003F654E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5094523E2F511003F654E /* LaunchScreen.storyboard */; };
 		72B5095223E2F511003F654E /* Mind_CastleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5095123E2F511003F654E /* Mind_CastleTests.swift */; };
+		72B5096223E2F94C003F654E /* ExternalDataAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096123E2F94C003F654E /* ExternalDataAgent.swift */; };
+		72B5096423E2F95F003F654E /* InternalDataAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096323E2F95F003F654E /* InternalDataAgent.swift */; };
+		72B5096623E2F97A003F654E /* LedgerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096523E2F97A003F654E /* LedgerView.swift */; };
+		72B5096823E2F992003F654E /* DropInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096723E2F992003F654E /* DropInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		72B5094D23E2F511003F654E /* Mind CastleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mind CastleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B5095123E2F511003F654E /* Mind_CastleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mind_CastleTests.swift; sourceTree = "<group>"; };
 		72B5095323E2F511003F654E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B5096123E2F94C003F654E /* ExternalDataAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataAgent.swift; sourceTree = "<group>"; };
+		72B5096323E2F95F003F654E /* InternalDataAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalDataAgent.swift; sourceTree = "<group>"; };
+		72B5096523E2F97A003F654E /* LedgerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerView.swift; sourceTree = "<group>"; };
+		72B5096723E2F992003F654E /* DropInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +89,10 @@
 		72B5093623E2F50E003F654E /* Mind Castle */ = {
 			isa = PBXGroup;
 			children = (
-				72B5093723E2F50E003F654E /* AppDelegate.swift */,
-				72B5093923E2F50E003F654E /* SceneDelegate.swift */,
-				72B5093E23E2F50E003F654E /* ContentView.swift */,
+				72B5095E23E2F629003F654E /* Delegates */,
+				72B5095D23E2F5D5003F654E /* Models */,
+				72B5095C23E2F578003F654E /* Views */,
 				72B5094023E2F511003F654E /* Assets.xcassets */,
-				72B5094523E2F511003F654E /* LaunchScreen.storyboard */,
 				72B5094823E2F511003F654E /* Info.plist */,
 				72B5093B23E2F50E003F654E /* Mind_Castle.xcdatamodeld */,
 				72B5094223E2F511003F654E /* Preview Content */,
@@ -108,6 +115,51 @@
 				72B5095323E2F511003F654E /* Info.plist */,
 			);
 			path = "Mind CastleTests";
+			sourceTree = "<group>";
+		};
+		72B5095C23E2F578003F654E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72B5096023E2F661003F654E /* Directory */,
+				72B5095F23E2F658003F654E /* Ledger */,
+				72B5094523E2F511003F654E /* LaunchScreen.storyboard */,
+				72B5093E23E2F50E003F654E /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		72B5095D23E2F5D5003F654E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72B5096123E2F94C003F654E /* ExternalDataAgent.swift */,
+				72B5096323E2F95F003F654E /* InternalDataAgent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		72B5095E23E2F629003F654E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				72B5093723E2F50E003F654E /* AppDelegate.swift */,
+				72B5093923E2F50E003F654E /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		72B5095F23E2F658003F654E /* Ledger */ = {
+			isa = PBXGroup;
+			children = (
+				72B5096523E2F97A003F654E /* LedgerView.swift */,
+				72B5096723E2F992003F654E /* DropInView.swift */,
+			);
+			path = Ledger;
+			sourceTree = "<group>";
+		};
+		72B5096023E2F661003F654E /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Directory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,8 +263,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B5096223E2F94C003F654E /* ExternalDataAgent.swift in Sources */,
 				72B5093823E2F50E003F654E /* AppDelegate.swift in Sources */,
+				72B5096423E2F95F003F654E /* InternalDataAgent.swift in Sources */,
+				72B5096823E2F992003F654E /* DropInView.swift in Sources */,
 				72B5093A23E2F50E003F654E /* SceneDelegate.swift in Sources */,
+				72B5096623E2F97A003F654E /* LedgerView.swift in Sources */,
 				72B5093F23E2F50E003F654E /* ContentView.swift in Sources */,
 				72B5093D23E2F50E003F654E /* Mind_Castle.xcdatamodeld in Sources */,
 			);
