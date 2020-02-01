@@ -10,7 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        HStack {
+            // I actually want this first view to be a user selected option
+            // This would mean that you could select what goes in the ledger spot.
+            Ledger() // TODO: Make this selection user preferance
+            DropIn()
+        }
     }
 }
 

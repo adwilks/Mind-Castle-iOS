@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
-
+/* DropIn takes a list of commonly accessed views and makes
+ them accessible in an expandable side tab*/
 struct DropIn: View {
+    //let viewList: [Node]?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Drop In")
     }
 }
 

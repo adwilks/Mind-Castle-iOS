@@ -19,6 +19,9 @@
 		72B5096423E2F95F003F654E /* InternalDataAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096323E2F95F003F654E /* InternalDataAgent.swift */; };
 		72B5096623E2F97A003F654E /* LedgerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096523E2F97A003F654E /* LedgerView.swift */; };
 		72B5096823E2F992003F654E /* DropInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096723E2F992003F654E /* DropInView.swift */; };
+		72B5096B23E3005C003F654E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096A23E3005C003F654E /* WebView.swift */; };
+		72B5099623E585E9003F654E /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5099523E585E9003F654E /* Capture.swift */; };
+		72B5099823E5871B003F654E /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5099723E5871B003F654E /* CaptureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		72B5096323E2F95F003F654E /* InternalDataAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalDataAgent.swift; sourceTree = "<group>"; };
 		72B5096523E2F97A003F654E /* LedgerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerView.swift; sourceTree = "<group>"; };
 		72B5096723E2F992003F654E /* DropInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropInView.swift; sourceTree = "<group>"; };
+		72B5096A23E3005C003F654E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		72B5096D23E30629003F654E /* Mind Castle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mind Castle.entitlements"; sourceTree = "<group>"; };
+		72B5099523E585E9003F654E /* Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
+		72B5099723E5871B003F654E /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +96,13 @@
 		72B5093623E2F50E003F654E /* Mind Castle */ = {
 			isa = PBXGroup;
 			children = (
+				72B5096D23E30629003F654E /* Mind Castle.entitlements */,
+				72B5096C23E30106003F654E /* Agents */,
 				72B5095E23E2F629003F654E /* Delegates */,
 				72B5095D23E2F5D5003F654E /* Models */,
 				72B5095C23E2F578003F654E /* Views */,
 				72B5094023E2F511003F654E /* Assets.xcassets */,
 				72B5094823E2F511003F654E /* Info.plist */,
-				72B5093B23E2F50E003F654E /* Mind_Castle.xcdatamodeld */,
 				72B5094223E2F511003F654E /* Preview Content */,
 			);
 			path = "Mind Castle";
@@ -120,6 +128,7 @@
 		72B5095C23E2F578003F654E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				72B5096923E3004B003F654E /* Utility */,
 				72B5096023E2F661003F654E /* Directory */,
 				72B5095F23E2F658003F654E /* Ledger */,
 				72B5094523E2F511003F654E /* LaunchScreen.storyboard */,
@@ -131,8 +140,8 @@
 		72B5095D23E2F5D5003F654E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				72B5096123E2F94C003F654E /* ExternalDataAgent.swift */,
-				72B5096323E2F95F003F654E /* InternalDataAgent.swift */,
+				72B5093B23E2F50E003F654E /* Mind_Castle.xcdatamodeld */,
+				72B5099523E585E9003F654E /* Capture.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				72B5096523E2F97A003F654E /* LedgerView.swift */,
-				72B5096723E2F992003F654E /* DropInView.swift */,
+				72B5099723E5871B003F654E /* CaptureView.swift */,
 			);
 			path = Ledger;
 			sourceTree = "<group>";
@@ -160,6 +169,24 @@
 			children = (
 			);
 			path = Directory;
+			sourceTree = "<group>";
+		};
+		72B5096923E3004B003F654E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				72B5096723E2F992003F654E /* DropInView.swift */,
+				72B5096A23E3005C003F654E /* WebView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		72B5096C23E30106003F654E /* Agents */ = {
+			isa = PBXGroup;
+			children = (
+				72B5096123E2F94C003F654E /* ExternalDataAgent.swift */,
+				72B5096323E2F95F003F654E /* InternalDataAgent.swift */,
+			);
+			path = Agents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,10 +293,13 @@
 				72B5096223E2F94C003F654E /* ExternalDataAgent.swift in Sources */,
 				72B5093823E2F50E003F654E /* AppDelegate.swift in Sources */,
 				72B5096423E2F95F003F654E /* InternalDataAgent.swift in Sources */,
+				72B5099823E5871B003F654E /* CaptureView.swift in Sources */,
 				72B5096823E2F992003F654E /* DropInView.swift in Sources */,
 				72B5093A23E2F50E003F654E /* SceneDelegate.swift in Sources */,
 				72B5096623E2F97A003F654E /* LedgerView.swift in Sources */,
+				72B5096B23E3005C003F654E /* WebView.swift in Sources */,
 				72B5093F23E2F50E003F654E /* ContentView.swift in Sources */,
+				72B5099623E585E9003F654E /* Capture.swift in Sources */,
 				72B5093D23E2F50E003F654E /* Mind_Castle.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +452,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Mind Castle/Mind Castle.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mind Castle/Preview Content\"";
 				DEVELOPMENT_TEAM = 646TAXN5JB;
 				ENABLE_PREVIEWS = YES;
@@ -433,6 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.ukiyo.Mind-Castle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,7 +475,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Mind Castle/Mind Castle.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mind Castle/Preview Content\"";
 				DEVELOPMENT_TEAM = 646TAXN5JB;
 				ENABLE_PREVIEWS = YES;
@@ -453,6 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.ukiyo.Mind-Castle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
