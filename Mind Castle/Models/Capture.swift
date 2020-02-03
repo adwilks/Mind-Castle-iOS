@@ -13,6 +13,7 @@ public class Capture:NSManagedObject, Identifiable {
     @NSManaged public var createdOn:Date?
     @NSManaged public var tags:String?
     @NSManaged public var title:String? //Is this necessary, one of the points is to not need this sort of thing...
+    @NSManaged public var content:String?
 }
 
 extension Capture {
