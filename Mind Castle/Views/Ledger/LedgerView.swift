@@ -25,61 +25,67 @@ struct Ledger: View {
     @State private var newCaptureContent = ""
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .background(Color.red)
-            
-            List {
-                Section(header: Text("New Capture!")) {
-                    VStack {
-                        TextField("Capture title", text: self.$newCaptureTitle)
-                        HStack{
-                            TextField("Capture Contents", text: self.$newCaptureContent)
-                            Button(action: {
-                                //Pull the input from the text field and commit to coredata context
-                                let capture = Capture(context: self.managedObjectContext)
-                                capture.title = self.newCaptureTitle
-                                
-                                capture.content = self.newCaptureContent
-                                capture.createdOn = Date()
-                                
-                                do {
-                                    try self.managedObjectContext.save()
-                                } catch {
-                                    print(error)
-                                }
-                                self.newCaptureTitle = ""
-                                self.newCaptureContent = ""
-                            }) {
-                                Image(systemName: "plus.circle.fill")
-                                    .foregroundColor(.green)
-                                    .imageScale(.large)
-                            }
-                        }
-
-                    }
-                }
-                Section(header: Text("Latest Captures")) {
-                        ForEach(self.captures) {capture in
-                            CaptureView(title: capture.title!, tags: "Generic Tag", content: capture.content!) //TODO: Don't force unwrap here
+        List {
+            Section(header: Text("New Capture!")) {
+                VStack {
+                    TextField("Capture title", text: self.$newCaptureTitle)
+                    HStack{
+                        TextField("Capture Contents", text: self.$newCaptureContent)
+                            .multilineTextAlignment(.leading)
                             
-                        }.onDelete {indexSet in
-                            let deleteItem = self.captures[indexSet.first!]
-                            self.managedObjectContext.delete(deleteItem)
+                            
+                        Button(action: {
+                            //Pull the input from the text field and commit to coredata context
+                            let capture = Capture(context: self.managedObjectContext)
+                            capture.title = self.newCaptureTitle
+                            
+                            capture.content = self.newCaptureContent
+                            capture.createdOn = Date()
                             
                             do {
                                 try self.managedObjectContext.save()
                             } catch {
                                 print(error)
                             }
+                            self.newCaptureTitle = ""
+                            self.newCaptureContent = ""
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.green)
+                                .imageScale(.large)
                         }
                     }
+
+                }
             }
-        
+            Section(header: Text("Latest Captures")) {
+                    ForEach(self.captures) {capture in
+                        CaptureView(title: capture.title!, tags: "Generic Tag", content: capture.content!) //TODO: Don't force unwrap here
+                        
+                    }.onDelete {indexSet in
+                        let deleteItem = self.captures[indexSet.first!]
+                        self.managedObjectContext.delete(deleteItem)
+                        
+                        do {
+                            try self.managedObjectContext.save()
+                        } catch {
+                            print(error)
+                        }
+                    }
+                }
         }
-       
-        
+    
     }
+
+}
+
+func extractCaptureFields(node: Capture) -> [String: String] {
+    var captureItems = [String : String]()
+    captureItems = ["title": "", "tags":"", "content":""]
+    
+   
+    
+    return captureItems
 }
 
 
