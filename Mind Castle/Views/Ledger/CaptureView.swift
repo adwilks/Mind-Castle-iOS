@@ -11,6 +11,7 @@ import SwiftUI
 struct CaptureView: View {
      var title: String = ""
     //var createdOn:String = ""
+    // The captureview treats the tags as a string and the data model treats them as [String]?
     var tags: String = ""
     var content: String = ""
     

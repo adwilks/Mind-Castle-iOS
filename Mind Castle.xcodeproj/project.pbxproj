@@ -22,7 +22,7 @@
 		72B5096B23E3005C003F654E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5096A23E3005C003F654E /* WebView.swift */; };
 		72B5099623E585E9003F654E /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5099523E585E9003F654E /* Capture.swift */; };
 		72B5099823E5871B003F654E /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5099723E5871B003F654E /* CaptureView.swift */; };
-		72BA97332407A25100A5CC4E /* TagAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BA97322407A25100A5CC4E /* TagAgent.swift */; };
+		72BA97332407A25100A5CC4E /* CaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BA97322407A25100A5CC4E /* CaptureService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,8 @@
 		72B5099523E585E9003F654E /* Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
 		72B5099723E5871B003F654E /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		72BA973123FBDD0A00A5CC4E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		72BA97322407A25100A5CC4E /* TagAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagAgent.swift; sourceTree = "<group>"; };
+		72BA97322407A25100A5CC4E /* CaptureService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureService.swift; sourceTree = "<group>"; };
+		72BA9735240A175500A5CC4E /* DataOpsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = DataOpsPlayground.playground; path = ../DataOpsPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 		72B5095023E2F511003F654E /* Mind CastleTests */ = {
 			isa = PBXGroup;
 			children = (
+				72BA9735240A175500A5CC4E /* DataOpsPlayground.playground */,
 				72B5095123E2F511003F654E /* Mind_CastleTests.swift */,
 				72B5095323E2F511003F654E /* Info.plist */,
 			);
@@ -188,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				72B5096123E2F94C003F654E /* ExternalDataAgent.swift */,
-				72BA97322407A25100A5CC4E /* TagAgent.swift */,
+				72BA97322407A25100A5CC4E /* CaptureService.swift */,
 				72B5096323E2F95F003F654E /* InternalDataAgent.swift */,
 			);
 			path = Agents;
@@ -303,7 +305,7 @@
 				72B5093A23E2F50E003F654E /* SceneDelegate.swift in Sources */,
 				72B5096623E2F97A003F654E /* LedgerView.swift in Sources */,
 				72B5096B23E3005C003F654E /* WebView.swift in Sources */,
-				72BA97332407A25100A5CC4E /* TagAgent.swift in Sources */,
+				72BA97332407A25100A5CC4E /* CaptureService.swift in Sources */,
 				72B5093F23E2F50E003F654E /* ContentView.swift in Sources */,
 				72B5099623E585E9003F654E /* Capture.swift in Sources */,
 				72B5093D23E2F50E003F654E /* Mind_Castle.xcdatamodeld in Sources */,
